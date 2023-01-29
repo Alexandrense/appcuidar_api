@@ -1,16 +1,30 @@
 @startuml
 
 left to right direction
-
+ 
 rectangle "Base Entities" {
+
   object User {
     -id:int
     +name:string
+    +type:string
+    +auth:Auth
+    +location:Location
+    +registration_date:date
+  }
+  
+  object Auth {
+    -id:int
     +username:string
     +password:string
+    +public_key:string
+    +private_key:string
+  }
+  
+  object Location {
+    -id:int
     +country:string
     +city:string
-    +type:string
   }
   
   object Patient {
@@ -37,8 +51,9 @@ rectangle "Registry" {
   }
 }
 
-
-User --> Patient
-Patient --> DailyRegistries
+User --> Auth
+User --> Location
+Patient --> User
+DailyRegistries --> Patient
 
 @enduml
