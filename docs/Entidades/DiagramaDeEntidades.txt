@@ -44,6 +44,10 @@ rectangle "Registry" {
     +date:date
     +bath:boolean
     +bloodPreassure:string
+    +breakfast:string
+    +lunch:string
+    +coffee:string
+    +dinner:string
     +temperature:string
     +dayClassification:string
     +description:string

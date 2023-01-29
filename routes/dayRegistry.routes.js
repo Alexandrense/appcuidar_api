@@ -19,6 +19,10 @@ router.route('/')
         body('temperature').isString(),
         body('dayClassification').isString(),
         body('description').isString(),
+        body('breakfast').isString(),
+        body('lunch').isString(),
+        body('coffee').isString(),
+        body('dinner').isString(),
         sanitizeBody('description').whitelist(CONFIG.sanitize.alphabet + CONFIG.sanitize.numerical)
     ], DayRegistryController.create);
 

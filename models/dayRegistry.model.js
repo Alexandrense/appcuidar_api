@@ -9,7 +9,11 @@ const dayRegistrySchema = new Schema({
     bloodPressure: String,
     temperature: String,
     dayClassification: String,
-    description: String
+    description: String,
+    breakfast: String,
+    lunch: String,
+    coffee: String,
+    dinner: String
 });
 
 module.exports = global.mongoConnection.model(CONFIG.mongodb.collections.dayRegistry, dayRegistrySchema);

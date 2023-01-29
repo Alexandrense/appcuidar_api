@@ -31,6 +31,10 @@ exports.create = (req, res) => {
         bloodPressure: req.body.bloodPressure,
         temperature: req.body.temperature,
         dayClassification: req.body.dayClassification,
+        breakfast: req.body.breakfast,
+        lunch: req.body.lunch,
+        coffee: req.body.coffee,
+        dinner: req.body.dinner,
         description: req.body.description
     }).save((error, dayRegistry) => {
         if (error) throw error;
